@@ -1,0 +1,10 @@
+% \vspace variaties
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
+
+% \spacedhrule a horizontal line with some vertical space before and after it
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
+
+% pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
+\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
+\newcommand*\sbull{\ \ \bull \ \ }
