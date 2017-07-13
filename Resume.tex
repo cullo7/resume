@@ -1,65 +1,97 @@
 % Default document class.
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 
 % Use defined style package
 \usepackage{style}
 
 % Page margins.
-\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Indentation
+\setlength{\parindent}{0pt}
+
+% For \href{}{}
+\usepackage{hyperref}
+
+% Set language
+\usepackage[english]{babel}
+
+\usepackage{enumitem}
+% Space between bullets
+% List indent
+\setlist[itemize]{leftmargin=*, noitemsep,topsep=1.5pt,itemsep=1.5pt, parsep=0pt,partopsep=0pt}
+
+% XeTeX specific stuff with fall-back.
+\usepackage{ifxetex}
+\ifxetex
+% Typography
+\usepackage{fontspec}
+\newcommand{\lmr}{\fontfamily{lmr}\selectfont} % Latin Modern Roman
+ 
+\else
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\fi
 
 \begin{document}
-\centerline{\Huge Aiden Cullo}
-\vspace{5mm}
-\centerline{\small845.943.8311\sbar \href{mailto:culloaiden3@gmail.com}{culloaiden3@gmail.com} \sbar \href{http://aidencullo.me}{aidencullo.me}\sbar\href{https://github.com/cullo7}{github.com/cullo7}}
-\vspace{2mm}
+\centerline{\Huge \textbf{Aiden Cullo}}
+\vspace{1.5mm}
+
+% \sbar is a vertical bar with a space buffer on either side
+\centerline{\small845.943.8311 \sbar\href{mailto:culloaiden3@gmail.com}{culloaiden3@gmail.com} \sbar \href{http://aidencullo.me}{aidencullo.me}\sbar\href{https://github.com/cullo7}{github.com/cullo7}}
+\vspace{-1mm}
 \subsection*{EDUCATION}
-\vspace{1mm}
-\spacedhrule{0.1em}{0.9em}
+
+% Horizonal line across page
+\spacedhrule{-0.1em}{0.9em}
+
 \textbf{State University of New York at Binghamton} \\ 
-Bachelor of Science Computer Science and Applied Physics Expected May 2019 \\
-Cumulative GPA: 3.7/4.0;  Major GPA: 3.76/4.0\\
-Dean's list\sbull 
-Upsilon Pi Epsilon CS Honor Society\sbull 
-Phi Eta Sigma Honor Society \\
-\vspace{2mm}
-\subsection*{TECHNICAL SKILLS}
-\vspace{1mm}
-\spacedhrule{0.1em}{0.9em}
+% \hfill to fill space and push text to the side of the page
+\textit{Bachelor of Science Computer Science and Applied Physics}\hfill Expected May 2019
 \begin{itemize}
-  \item \textbf{Relevant Coursework}: DataStructures, Computer Systems, Architecture and Programming, Integral Calculus, Multivariable Calculus, Operating Systems, Differential Equations, Number Systems, Machine Learning
+\item Cumulative GPA: 3.7/4.0;  Major GPA: 3.76/4.0
+	\item Dean's list\sbull Upsilon Pi Epsilon CS Honor Society\sbull Phi Eta Sigma Honor Society
+\end{itemize}
+\vspace{-1mm}
+\subsection*{TECHNICAL SKILLS}
+\spacedhrule{-0.1em}{0.9em}
+\begin{itemize}
+  \item \textbf{Relevant Coursework}: Data Structures, Computer Systems, Calculus, Operating Systems, Differential Equations, Number Systems, Machine Learning
   \item	\textbf{Programming Languages}: Java, C, C++, Python, Javascipt, SQL, \LaTeX, and OpenMP
   \item \textbf{Technologies}: Linux, Git, Arduino, Docker, and Vim
 \end{itemize}
-\vspace{2mm}
+\vspace{-1mm}
 \subsection*{RELEVANT EXPERIENCE}
-\vspace{1mm}
-\spacedhrule{0.1em}{0.9em}
-\textbf{National Aeronautics and Space Administration \hfill} Mountain View, CA \\ 
-\textit{Prognostics Software Intern}\hfill June 2017 — Present \\
+\spacedhrule{-0.1em}{0.9em}
 
+\textbf{National Aeronautics and Space Administration \hfill} Mountain View, CA \\ 
+\textit{Prognostics Software Intern}\hfill June 2017 – Present
 \begin{itemize}
 	\item Designing and developing a library to represent and manipulate data values with uncertainty in \textbf{C++} and \textbf{MATLAB}
 	\item Implementing sampling, resampling, fitting, and calculation methods for random variable datatypes
-	\item Writing driver to deploy general prognostics software in parallelized containers using Docker Binghamton Department of Physics, Applied Physics, and Astronomy
+	\item Writing driver to deploy general prognostics software in parallelized containers using \textbf{Docker}
 \end{itemize}
-\textbf{Binghamton University}\hfill Binghamton. NY
-\textit{Research Assistant}\hfill August 2016 – Present
+
+\textbf{Binghamton University Physics Department}\hfill Binghamton, NY \\
+\textit{Research Assistant}\hfill Aug 2016 – Present
 \begin{itemize}
 	\item Write software for evolutionary machine learning algorithm to find most stable atomic configuration
 	\item Debug and parallelize \textbf{C} code using multithreading with \textbf{OpenMP}
 \end{itemize}
-\textbf{Cornell Personal Robotics Assitants Laboratory}\hfill Ithaca. NY
-\textit{Research Intern}\hfill May 2016 – August 2016
+
+\textbf{Cornell Personal Robotics Assitants Laboratory}\hfill Ithaca, NY \\
+\textit{Research Intern}\hfill May 2016 – Aug 2016
 \begin{itemize}
 	\item Developed algorithm in \textbf{C++} and \textbf{ROS} for robot to visually identify properties of an object (shape, texture, etc.)
 	\item Wrote data marshalling software in \textbf{Python} to communicate information between distributed components
 	\item Coordinated with other team members to modify software in order to smoothly integrate into larger project
 \end{itemize}
-\vspace{2mm}
-
+\vspace{-1mm}
 \subsection*{LEADERSHIP}
-\vspace{1mm}
-\spacedhrule{0.1em}{0.9em}
+\spacedhrule{-0.1em}{0.9em}
+
 \textbf{Hack BU} \\
 \textit{Internal Hackathon Coordinator}
 \begin{itemize}
@@ -67,17 +99,43 @@ Phi Eta Sigma Honor Society \\
 	\item Communicate with other hackathon organizers, sponsors, and school administrators
 	\item Mentor and teach student hackers at weekly meetings and club sponsored events Binghamton Robotics Club
 \end{itemize}
-\textbf{BU Robotics}
+
+\textbf{BU Robotics}\\
 \textit{President}
 \begin{itemize}
 	\item Coordinate teams to participate in inter-club design competitions and the Spaceport America Cup
 	\item Organize demonstrations, group projects and collaborative events with other clubs
 	\item Educate graduate/undergraduate members on concepts related to physics, computer science, and robotics
 \end{itemize}
-\vspace{2mm}
-
+\vspace{-1mm}
 \subsection*{PROJECTS}
-\vspace{1mm}
-\spacedhrule{0.1em}{0.9em}
- 
+\spacedhrule{-0.1em}{0.9em}
+
+\textbf{Artemis II} \hfill Binghamton, NY \\
+\textit{Hybrid-Fuel Rocket}\hfill Sep 2016 – Present
+\begin{itemize}
+	\item Managed a group of 5-6 engineers and computer scientists in creating rocket components
+	\item Built prototype for modular rocket engine powered by a potassium nitrate and sucrose hybrid fuel
+\end{itemize}
+
+\textbf{DNA Sequence} \hfill New York, NY \\
+\textit{Python compiler that calculates melting temperature}  \hfill Dec 2016 – Jan 2017                             
+\begin{itemize}
+	\item Developed algorithm in Python that calculates Gibb’s free energy contribution of each base pair
+	\item Using oligonucleotide molarity and salt content, calculated the temperature of 50% dissociation of given DNA strand
+\end{itemize}
+
+\textbf{Pippin} \hfill Binghamton, NY \\
+\textit{Java CPU simulator}\hfill Jan 2016 — May 2016                           
+\begin{itemize}
+	\item Graphical User Interface that imitates a CPU with memory slots, an accumulator, a program counter, etc.
+	\item Assembled pippin assembly (.pasm) source code into executable files and runs .exe file in GUI
+\end{itemize}
+
+\textbf{Mazerunner}\hfill  Rosendale, NY    \\
+\textit{Autonomous VEX Robot}\hfill Feb 2015 — May 2015
+\begin{itemize}
+	\item Built robot and attached servo motors, ultrasonic sensors, bump sensors, microcontroller and rechargeable battery
+	\item Wrote software in easyC and Python that utilized sensor data to avoid obstacles and navigate through maze
+\end{itemize}
 \end{document}
