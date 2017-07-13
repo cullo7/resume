@@ -5,7 +5,7 @@
 \usepackage{style}
 
 % Page margins.
-\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[a4paper,margin=0.5in]{geometry}
 
 % Indentation
 \setlength{\parindent}{0pt}
@@ -21,9 +21,13 @@
 % List indent
 \setlist[itemize]{leftmargin=*, noitemsep,topsep=1.5pt,itemsep=1.5pt, parsep=0pt,partopsep=0pt}
 
+% Get rid of page number
+\usepackage{nopageno}
+
 % XeTeX specific stuff with fall-back.
 \usepackage{ifxetex}
 \ifxetex
+
 % Typography
 \usepackage{fontspec}
 \newcommand{\lmr}{\fontfamily{lmr}\selectfont} % Latin Modern Roman
@@ -40,102 +44,96 @@
 \vspace{1.5mm}
 
 % \sbar is a vertical bar with a space buffer on either side
-\centerline{\small845.943.8311 \sbar\href{mailto:culloaiden3@gmail.com}{culloaiden3@gmail.com} \sbar \href{http://aidencullo.me}{aidencullo.me}\sbar\href{https://github.com/cullo7}{github.com/cullo7}}
+\centerline{\textsc{845.943.8311 \sbar\href{mailto:culloaiden3@gmail.com}{culloaiden3@gmail.com} \sbar \href{http://aidencullo.me}{aidencullo.me}\sbar\href{https://github.com/cullo7}{github.com/cullo7}}}
 \vspace{-1mm}
 \subsection*{EDUCATION}
 
 % Horizonal line across page
-\spacedhrule{-0.1em}{0.9em}
-
+\spacedhrule{-0.1em}{0.5em}
 \textbf{State University of New York at Binghamton} \\ 
 % \hfill to fill space and push text to the side of the page
-\textit{Bachelor of Science Computer Science and Applied Physics}\hfill Expected May 2019
-\begin{itemize}
-\item Cumulative GPA: 3.7/4.0;  Major GPA: 3.76/4.0
-	\item Dean's list\sbull Upsilon Pi Epsilon CS Honor Society\sbull Phi Eta Sigma Honor Society
-\end{itemize}
-\vspace{-1mm}
+\textit{B.S. in Computer Science and Applied Physics}\hfill \textit{Expected May 2019}\\
+Cumulative GPA: 3.7/4.0;  Major GPA: 3.76/4.0\\
+Dean's list\sbull Upsilon Pi Epsilon CS Honor Society\sbull Phi Eta Sigma Honor Society \\ 
+\textbf{Relevant Coursework}: Data Structures, Computer Systems, Operating Systems, Number Systems, Machine Learning
+
+\subsecspace
 \subsection*{TECHNICAL SKILLS}
-\spacedhrule{-0.1em}{0.9em}
-\begin{itemize}
-  \item \textbf{Relevant Coursework}: Data Structures, Computer Systems, Calculus, Operating Systems, Differential Equations, Number Systems, Machine Learning
-  \item	\textbf{Programming Languages}: Java, C, C++, Python, Javascipt, SQL, \LaTeX, and OpenMP
-  \item \textbf{Technologies}: Linux, Git, Arduino, Docker, and Vim
-\end{itemize}
-\vspace{-1mm}
+\spacedhrule{-0.1em}{0.5em}
+\textbf{Programming Languages}: Java, C, C++, Python, Javascipt, SQL, \LaTeX, and OpenMP\\
+\textbf{Technologies}: Linux, Git, Arduino, Docker, and Vim
+\subsecspace
 \subsection*{RELEVANT EXPERIENCE}
-\spacedhrule{-0.1em}{0.9em}
+\spacedhrule{-0.1em}{0.5em}
 
-\textbf{National Aeronautics and Space Administration \hfill} Mountain View, CA \\ 
-\textit{Prognostics Software Intern}\hfill June 2017 – Present
+\textbf{National Aeronautics and Space Administration} \hfill Mountain View, CA \\ 
+\textit{Prognostics Software Intern}\hfill \textit{June 2017 – Present}
 \begin{itemize}
-	\item Designing and developing a library to represent and manipulate data values with uncertainty in \textbf{C++} and \textbf{MATLAB}
-	\item Implementing sampling, resampling, fitting, and calculation methods for random variable datatypes
-	\item Writing driver to deploy general prognostics software in parallelized containers using \textbf{Docker}
+	\item Developing a library to represent and manipulate data with uncertainty in \textbf{C++} and \textbf{MATLAB}
+	\item Implementing sampling, resampling, fitting, etc. methods for random variable datatypes
+	\item Writing driver to deploy general prognostics software using \textbf{Docker}
 \end{itemize}
-
-\textbf{Binghamton University Physics Department}\hfill Binghamton, NY \\
-\textit{Research Assistant}\hfill Aug 2016 – Present
+\ssubsecspace
+\textbf{Binghamton University Physics Department} \hfill Binghamton, NY \\
+\textit{Research Assistant}\hfill \textit{Aug 2016 – Present}
 \begin{itemize}
-	\item Write software for evolutionary machine learning algorithm to find most stable atomic configuration
+	\item Write software for evolutionary machine learning algorithm to optimize atomic configuration
 	\item Debug and parallelize \textbf{C} code using multithreading with \textbf{OpenMP}
 \end{itemize}
-
+\ssubsecspace
 \textbf{Cornell Personal Robotics Assitants Laboratory}\hfill Ithaca, NY \\
-\textit{Research Intern}\hfill May 2016 – Aug 2016
+\textit{Research Intern}\hfill \textit{May 2016 – Aug 2016}
 \begin{itemize}
-	\item Developed algorithm in \textbf{C++} and \textbf{ROS} for robot to visually identify properties of an object (shape, texture, etc.)
-	\item Wrote data marshalling software in \textbf{Python} to communicate information between distributed components
-	\item Coordinated with other team members to modify software in order to smoothly integrate into larger project
+	\item Developed computer vision algorithm in \textbf{C++} and \textbf{ROS} to identify shape, texture, or curvature of an object
+	\item Wrote data marshalling program in \textbf{Python} to communicate between distributed components
+	\item Automated installation and build procedure for larger software project
 \end{itemize}
-\vspace{-1mm}
+\subsecspace
 \subsection*{LEADERSHIP}
-\spacedhrule{-0.1em}{0.9em}
+\spacedhrule{-0.1em}{0.5em}
 
 \textbf{Hack BU} \\
 \textit{Internal Hackathon Coordinator}
 \begin{itemize}
 	\item Help organize and run Binghamton's annual hackathon with 300+ participants and volunteers
-	\item Communicate with other hackathon organizers, sponsors, and school administrators
-	\item Mentor and teach student hackers at weekly meetings and club sponsored events Binghamton Robotics Club
+	\item Mentor and teach student hackers at weekly workshops and club events
 \end{itemize}
-
+\ssubsecspace
 \textbf{BU Robotics}\\
 \textit{President}
 \begin{itemize}
 	\item Coordinate teams to participate in inter-club design competitions and the Spaceport America Cup
-	\item Organize demonstrations, group projects and collaborative events with other clubs
-	\item Educate graduate/undergraduate members on concepts related to physics, computer science, and robotics
+	\item Organize demonstrations, group projects, and competitions involving robotics
 \end{itemize}
-\vspace{-1mm}
+\subsecspace
 \subsection*{PROJECTS}
-\spacedhrule{-0.1em}{0.9em}
+\spacedhrule{-0.1em}{0.5em}
 
 \textbf{Artemis II} \hfill Binghamton, NY \\
-\textit{Hybrid-Fuel Rocket}\hfill Sep 2016 – Present
+\textit{Hybrid-Fuel Rocket}\hfill \textit{Sep 2016 – Present}
 \begin{itemize}
 	\item Managed a group of 5-6 engineers and computer scientists in creating rocket components
-	\item Built prototype for modular rocket engine powered by a potassium nitrate and sucrose hybrid fuel
+	\item Built prototype for rocket engine powered by a potassium nitrate and sucrose hybrid fuel
 \end{itemize}
-
+\ssubsecspace
 \textbf{DNA Sequence} \hfill New York, NY \\
-\textit{Python compiler that calculates melting temperature}  \hfill Dec 2016 – Jan 2017                             
+\textit{Python compiler that calculates melting temperature}  \hfill \textit{Dec 2016 – Jan 2017}                             
 \begin{itemize}
-	\item Developed algorithm in Python that calculates Gibb’s free energy contribution of each base pair
-	\item Using oligonucleotide molarity and salt content, calculated the temperature of 50% dissociation of given DNA strand
+	\item Developed algorithm in Python to calculate Gibb's free energy contribution in a DNA strand
+	\item Using oligonucleotide molarity and salt content, found base pair dissociation temperature
 \end{itemize}
-
+\ssubsecspace
 \textbf{Pippin} \hfill Binghamton, NY \\
-\textit{Java CPU simulator}\hfill Jan 2016 — May 2016                           
+\textit{Java CPU simulator}\hfill \textit{Jan 2016 — May 2016}                           
 \begin{itemize}
-	\item Graphical User Interface that imitates a CPU with memory slots, an accumulator, a program counter, etc.
-	\item Assembled pippin assembly (.pasm) source code into executable files and runs .exe file in GUI
+	\item Graphic visualization of CPU including accumulator, program counter, and physical memory
+	\item Assembles and runs pippin assembly (.pasm) source code in virtual environment
 \end{itemize}
-
+\ssubsecspace
 \textbf{Mazerunner}\hfill  Rosendale, NY    \\
-\textit{Autonomous VEX Robot}\hfill Feb 2015 — May 2015
+\textit{Autonomous VEX Robot}\hfill \textit{Feb 2015 — May 2015}
 \begin{itemize}
-	\item Built robot and attached servo motors, ultrasonic sensors, bump sensors, microcontroller and rechargeable battery
-	\item Wrote software in easyC and Python that utilized sensor data to avoid obstacles and navigate through maze
+	\item Built robot equipped with servo motors, ultrasonic sensors, and a microprocessor
+	\item Wrote software in \textbf{easyC} and \textbf{Python} that interprets sensory data to navigate around obstacles
 \end{itemize}
 \end{document}
